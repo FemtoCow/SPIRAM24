@@ -1,0 +1,5 @@
+SPIRAM24	KEYWORD1
+
+readByte  KEYWORD2
+writeByte  KEYWORD2
+
