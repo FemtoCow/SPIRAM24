@@ -42,6 +42,7 @@ class SPIRAM24
     void disable();
     char readByte(long address);
     char writeByte(long address, char data_byte);
+    char getCS();
   private:
     byte _csPin;
     void setMode(char mode); 

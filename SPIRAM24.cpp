@@ -26,6 +26,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 SPIRAM24::SPIRAM24(byte csPin) : _csPin(csPin)
 {
+  pinMode(csPin, OUTPUT);
   SPI.begin();
   this->disable();
   SPI.setClockDivider(SPI_CLOCK_DIV2);
@@ -42,6 +43,9 @@ void SPIRAM24::disable()
   digitalWrite(this->_csPin, HIGH);
 }
 
+char SPIRAM24::getCS() {
+  return this->_csPin;
+}
 
 char SPIRAM24::readByte(long address)
 {
